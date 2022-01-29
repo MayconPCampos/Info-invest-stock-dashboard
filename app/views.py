@@ -1,10 +1,11 @@
 from app.stock_data import fetch_stock, fetch_company
 from flask import render_template
 from app.stock import Stock
-from app import app, news_data
+from app import app, cache, news_data
 
 
 @app.route("/stocks/TSLA")
+@cache.cached(timeout=60)
 def stock():
 
     id = "TSLA"
