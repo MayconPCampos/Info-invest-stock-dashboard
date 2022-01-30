@@ -18,6 +18,8 @@ def stock():
     # informações sobre a companhia
     company = fetch_company(id)
     company_name = company.get("Name")
+
+    # obtem noticias da companhia
     news_list = news_data.fetch_news(id, company_name)
 
     return render_template(
