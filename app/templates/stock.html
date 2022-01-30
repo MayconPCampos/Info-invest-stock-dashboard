@@ -22,18 +22,18 @@
                     <div class="col">
                         <div>
                             {% if change["change"] < 0 %}
-                            <h3 style="color: red;">{{ change["change"] }}</h3>
+                                <h3 style="color: red;">{{ change["change"] }}</h3>
                             {% else %}
-                            <h3 style="color: green;">+{{ change["change"] }}</h3>
+                                <h3 style="color: green;">+{{ change["change"] }}</h3>
                             {% endif %}
                         </div>  
                     </div>
                     <div class="col">
                         <div>
                             {% if change["percent"] < 0 %}
-                            <h3 style="color: red;">({{ change["percent"] }}%)</h3>
+                                <h3 style="color: red;">({{ change["percent"] }}%)</h3>
                             {% else %}
-                            <h3 style="color: green;">(+{{ change["percent"] }}%)</h3>
+                                <h3 style="color: green;">(+{{ change["percent"] }}%)</h3>
                             {% endif %}
                         </div>  
                     </div>
@@ -79,17 +79,17 @@
                     </script>
                 </div>
                 {% if news_list %}
-                {% for news in news_list %}
-                <a href="{{ news.get('news_url') }}">{{ news.get("title") }}</a>
-                <p>{{ news.get("description") }}</p>
-                <hr>
-                {% endfor %}
+                    {% for news in news_list %}
+                        <a href="{{ news.get('news_url') }}">{{ news.get("title") }}</a>
+                        <p>{{ news.get("description") }}</p>
+                        <hr>
+                    {% endfor %}
                 {% endif %}
             </div>
             <div class="col-3">
                 <ul>
                     {% for item in company %}
-                    <li><strong>{{ item }}:</strong> {{ company[item] }}</li>
+                        <li><strong>{{ item }}:</strong> {{ company[item] }}</li>
                     {% endfor %}
                 </ul>
             </div>
