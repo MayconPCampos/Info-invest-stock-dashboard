@@ -11,11 +11,18 @@
 </head>
 <body>
     <div class="container">
+
+
+        <!-- barra superior -->
         <nav class="navbar bg-dark navbar-dark">
             <a class="navbar-brand ps-3" href="">InfoInvest</a>
-        </nav>  
+        </nav>
+
+
         <div class="row p-5">
             <div class="col-9">
+
+                <!-- Nome da companhia e valores de ações -->
                 <h3>{{ company.get("Name") }} ( {{ company.get("Symbol") }} ) {{ stock.close[-1]}} USD</h3>
                 <hr>
                 <div class="row">
@@ -56,28 +63,30 @@
                         </div>  
                     </div>
                 </div>
-                <!-- vscode acusa erro de sintaxe por usar jinja dentro do javascript -->
+
+
+                <!-- Gráfico de ações, vscode acusa erro de sintaxe por usar jinja dentro do javascript -->
                 <div class="pb-5">
                     <canvas id="lineChart" width="980" height="400"></canvas>
                     <script>
                         var ctx = document.getElementById('lineChart');
                         var lineChart = new Chart(ctx, {
                             type: 'line',
-                            data:   {
-                                    
+                            data:{
                                 labels: {{ stock.date | safe }},
-                                datasets: [
-                                    {
-                                        label: "close",
-                                        data: {{ stock.close | safe  }},
-                                        fill: false,
-                                        borderColor: "firebrick"
-                                    }
-                                ]
+                                datasets: [{
+                                    label: "close",
+                                    data: {{ stock.close | safe  }},
+                                    fill: false,
+                                    borderColor: "firebrick"
+                                }]
                             }
                         });
                     </script>
                 </div>
+
+
+                <!-- Lista de notícias relacionadas à companhia -->
                 {% if news_list %}
                     {% for news in news_list %}
                         <a href="{{ news.get('news_url') }}">{{ news.get("title") }}</a>
@@ -86,6 +95,9 @@
                     {% endfor %}
                 {% endif %}
             </div>
+            
+            
+            <!-- Informações da companhia -->
             <div class="col-3">
                 <ul>
                     {% for item in company %}
@@ -93,6 +105,8 @@
                     {% endfor %}
                 </ul>
             </div>
+        
+        
         </div>
     </div>
 </body>

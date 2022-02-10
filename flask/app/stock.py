@@ -7,17 +7,16 @@ class Stock:
         self.low =  stock_list[-1].get("low")
         self.volume = stock_list[-1].get("volume")
 
-        """Cria duas listas com as datas e os valores
-        de close dos ultimos sete dias, a lista é
-        invertida para a construção posteriormente
-        do gráfico na ordem correta"""
-
+        # Cria duas listas com as datas e os valores
+        # de close dos ultimos sete dias, a lista é
+        # invertida para a construção posteriormente
+        # do gráfico na ordem correta
         self.close = [stock.get("close") for stock in stock_list][8::-1]
         self.date = [stock.get("date") for stock in stock_list][8::-1]
 
 
     def get_change(self) -> float:
-        """Calcula a diferença do valor entre o
+        """Calcula a diferença do valor close entre o
         último e penultimo dia de fechamento e retorna
         a porcentagem de variação."""
 

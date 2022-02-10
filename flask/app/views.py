@@ -1,7 +1,8 @@
-from app.stock_data import fetch_stock, fetch_company
+from data.stock_data import fetch_stock, fetch_company
+from data.news_data import fetch_news
 from flask import render_template
 from app.stock import Stock
-from app import app, cache, news_data
+from app import app, cache
 
 
 @app.route("/stocks/TSLA")
@@ -20,7 +21,7 @@ def stock():
     company_name = company.get("Name")
 
     # obtem noticias da companhia
-    news_list = news_data.fetch_news(id, company_name)
+    news_list = fetch_news(id, company_name)
 
     return render_template(
         "stock.html",

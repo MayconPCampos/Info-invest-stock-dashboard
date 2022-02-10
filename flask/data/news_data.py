@@ -29,7 +29,7 @@ def fetch_news(symbol:str, company:str) -> list:
         "to": today,
         "language": "en",
         "sortBy": "popularity",
-        "pageSize": "15"
+        "pageSize": "10"
     }
 
     response = requests.get(URL, params=params)
@@ -37,8 +37,8 @@ def fetch_news(symbol:str, company:str) -> list:
     data = response.json()
     articles = data["articles"]
 
-    # cria uma lista de dicionarios
-    # contendo os dados das noticias
+    # Cria uma lista de dicionários
+    # contendo os dados das notícias
     news_list = []
     for article in articles:
         news = {

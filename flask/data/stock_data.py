@@ -9,7 +9,7 @@ URL = "https://www.alphavantage.co/query?"
 key = os.environ.get("alphaVantageKey")
 
 
-def fetch_company(id:str):
+def fetch_company(id:str) -> dict:
     """Faz a requisição dos dados da companhia
     e retorna em forma de dicionário"""
 
@@ -18,8 +18,6 @@ def fetch_company(id:str):
         "symbol": id,
         "apikey": key
     }
-
-    print("fetching stocks data...")
 
     response = requests.get(URL, params=parameters)
     response.raise_for_status()
@@ -41,13 +39,11 @@ def fetch_stock(id:str) -> list:
         "apikey": key
     }
 
-    print("fetching company data...")
-
     response = requests.get(URL, params=parameters)
     response.raise_for_status()
     stock_data = response.json()
 
-    # selecionando apenas dados necessários
+    # Selecionando apenas dados necessários
     data = stock_data["Time Series (Daily)"]
 
     stock_list = []
