@@ -6,7 +6,7 @@ recentes relacionadas e obtidas através da News API.
 
 Devido ao limite de requisições para a API da Alpha Vantage, eu limitei apenas para
 mostrar as ações da TSLA (Tesla), porém pode ser modificado facilmente para mostrar outras ações
-alterando o código da rota no arquivo views.py.
+alterando o código da rota no arquivo views.py como mostrado abaixo.
 
 ```
 
@@ -21,7 +21,7 @@ def stock(id):
 Esse mini app foi criado usando minha imagem docker-flask <a href="https://github.com/MayconPCampos/Ambiente-docker-flask">link aqui</a>.
 
 Para executar clone este repositório com o comando `git clone https://github.com/MayconPCampos/Mini-dashboard.git` no git bash
-e se você tiver o `Docker` instalado, é só executar o comando `docker-compose up` no console no diretório do repositório, 
+e se você tiver o `Docker` instalado é só executar o comando `docker-compose up` no console no diretório do repositório, 
 caso contrário instale as dependências com o comando `pip install -r requirements.txt` dentro do diretório `app` em seguida inicie com `flask run`.
 
 Acesse pela URL localhost:5000/stocks/TSLA.
