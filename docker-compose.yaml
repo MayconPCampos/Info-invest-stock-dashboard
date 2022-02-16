@@ -15,7 +15,7 @@ services:
       - alphaVantageKey=${alphaVantageKey}
       - newsApiKey=${newsApiKey}
 
-    # mudanças feitas no vscode na pasta flask serão refletidas dentro do diretório application no container
+    # mudanças feitas no vscode na pasta flask serão refletidas dentro do diretório app no container
     volumes:
       - ./flask:/app
     
