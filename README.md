@@ -18,7 +18,7 @@ def stock(id):
 
 ```
 
-Esse mini app criado usando a minha imagem docker-flask <a href="https://github.com/MayconPCampos/Ambiente-docker-flask">link aqui</a>.
+Esse mini app foi criado usando minha imagem docker-flask <a href="https://github.com/MayconPCampos/Ambiente-docker-flask">link aqui</a>.
 
 Para executar clone este repositório com o comando `git clone https://github.com/MayconPCampos/Mini-dashboard.git` no git bash
 e se você tiver o `Docker` instalado, é só executar o comando `docker-compose up` no console no diretório do repositório, 
