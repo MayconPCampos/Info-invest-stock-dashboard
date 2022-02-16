@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+
+  # cria o container e da o nome de flask flask
+  flask:
+
+    # comando para construir o container a partir do dockerfile dentro da pasta flask
+    build: ./flask 
+    
+    # acessa as variaveis de ambiente do arquivo .env
+    environment:
+      - FLASK_APP=${FLASK_APP}
+      - FLASK_ENV=${FLASK_ENV}
+      - alphaVantageKey=${alphaVantageKey}
+      - newsApiKey=${newsApiKey}
+
+    # mudanças feitas no vscode na pasta flask serão refletidas dentro do diretório application no container
+    volumes:
+      - ./flask:/app
+    
+    # configura para que a porta 5000 do container seja acessada através da porta 5000 no localhost
+    ports:
+      - 5000:5000

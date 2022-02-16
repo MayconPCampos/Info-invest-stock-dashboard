@@ -1,5 +1,5 @@
-from data.stock_data import fetch_stock, fetch_company
-from data.news_data import fetch_news
+from .data.stock_data import fetch_stock, fetch_company
+from .data.news_data import fetch_news
 from flask import render_template
 from app.stock import Stock
 from app import app, cache

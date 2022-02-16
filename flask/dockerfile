@@ -1,0 +1,14 @@
+# baixa a imagem selecionada python do hub.docker.com
+FROM python:3.9-slim
+
+# cria o diretório principal dentro do container chamado application
+WORKDIR /app
+
+# copia todos os arquivos da pasta flask para dentro do diretório app no container
+COPY . .
+
+# instala o flask
+RUN pip install -r requirements.txt
+
+# comando para rodar o flask ao iniciar o container
+CMD ["flask", "run", "--host", "0.0.0.0"]
