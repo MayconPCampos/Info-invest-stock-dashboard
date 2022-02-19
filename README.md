@@ -10,7 +10,7 @@ alterando o código da rota no arquivo views.py como mostrado abaixo.
 
 ```
 
-@app.route("/stocks/<int:id>")
+@app.route("/stocks/<id>")
 @cache.cached(timeout=60)
 def stock(id):
 
