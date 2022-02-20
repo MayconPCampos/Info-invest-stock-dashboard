@@ -2,7 +2,7 @@
 
 Mostra os valores dos últimos sete dias de uma ação e calcula o valor e a porcentagem de variação, geralmente
 usados para a avaliação de desempenho de uma ação, mostra também informações da companhia e as notícias
-recentes relacionadas e obtidas através da News API.
+recentes relacionadas obtidas através da News API.
 
 Devido ao limite de requisições para a API da Alpha Vantage, eu limitei apenas para
 mostrar as ações da TSLA (Tesla), porém pode ser modificado facilmente para mostrar outras ações
