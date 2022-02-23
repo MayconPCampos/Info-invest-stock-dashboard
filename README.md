@@ -4,7 +4,7 @@ Mostra os valores dos últimos sete dias de uma ação e calcula o valor e a por
 usados para a avaliação de desempenho de uma ação, mostra também informações da companhia e as notícias
 recentes relacionadas obtidas através da News API.
 
-Devido ao limite de requisições para a API da Alpha Vantage, eu limitei apenas para
+Devido ao limite de requisições do plano gratuito para a API da Alpha Vantage eu limitei apenas para
 mostrar as ações da TSLA (Tesla), porém pode ser modificado facilmente para mostrar outras ações
 alterando o código da rota no arquivo views.py como mostrado abaixo.
 
