@@ -5,7 +5,7 @@ usados para a avaliação de desempenho de uma ação, mostra também informaç�
 recentes relacionadas obtidas através da News API.
 
 Devido ao limite de requisições do plano gratuito para a API da Alpha Vantage eu limitei apenas para
-mostrar as ações da TSLA (Tesla), porém pode ser modificado facilmente para mostrar outras ações
+mostrar as ações de uma empresa, porém pode ser modificado facilmente para mostrar outras ações
 alterando o código da rota no arquivo views.py como mostrado abaixo.
 
 ```
