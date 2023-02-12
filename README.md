@@ -1,4 +1,4 @@
-# Mini dashboard
+# Stock Dashboard
 
 Mostra os valores dos últimos sete dias de uma ação e calcula o valor e a porcentagem de variação, geralmente
 usados para a avaliação de desempenho de uma ação, mostra também informações da companhia e as notícias
