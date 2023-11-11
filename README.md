@@ -25,7 +25,3 @@ e se você tiver o `Docker` instalado é só executar o comando `docker-compose 
 caso contrário instale as dependências com o comando `pip install -r requirements.txt` dentro do diretório `app` em seguida inicie com `flask run`.
 
 Acesse pela URL localhost:5000/stocks/TSLA.
-
-
-
-<img src="https://github.com/MayconPCampos/Mini-dashboard/blob/main/flask/app/static/image/dashboard.jpg?raw=true">
