@@ -1,12 +1,8 @@
 # Stock Dashboard
 
-Mostra os valores dos últimos sete dias de uma ação e calcula o valor e a porcentagem de variação, geralmente
-usados para a avaliação de desempenho de uma ação, mostra também informações da companhia e as notícias
-recentes relacionadas obtidas através da News API.
+Displays the values of the last seven days of a stock and calculates the value and percentage of variation, typically used for evaluating the performance of a stock. It also shows company information and recent related news obtained through the News API.
 
-Devido ao limite de requisições do plano usado para a API da Alpha Vantage eu limitei apenas para
-mostrar as ações de uma empresa, porém pode ser modificado facilmente para mostrar outras ações
-alterando o código da rota no arquivo views.py como mostrado abaixo.
+Due to the request limit of the plan used for the Alpha Vantage API, I have limited it to only show stocks of one company. However, it can easily be modified to show other stocks by changing the route code in the views.py file as shown below.
 
 ```
 
@@ -18,11 +14,9 @@ def stock(id):
 
 ```
 
-Esse mini app foi criado usando minha imagem docker-flask <a href="https://github.com/MayconPCampos/Ambiente-docker-flask">link aqui</a>.
 
-Para executar clone este repositório com o comando `git clone https://github.com/MayconPCampos/Mini-dashboard.git` no git bash
-e se você tiver o `Docker` instalado é só executar o comando `docker-compose up` no console no diretório do repositório, 
-caso contrário instale as dependências com o comando `pip install -r requirements.txt` dentro do diretório `app` em seguida inicie com `flask run`.
-É necessário criar um arquivo `.env` no diretório com as keys para acesso de ambas as APIs.
+This mini app was created using my Docker-Flask image <a href="https://github.com/MayconPCampos/Ambiente-docker-flask"> link here</a>.
 
-Acesse pela URL localhost:5000/stocks/TSLA.
+To run it, clone this repository using the command git clone https://github.com/MayconPCampos/Mini-dashboard.git in Git Bash. If you have Docker installed, simply run the command docker-compose up in the console inside the repository directory. If you don't have Docker installed, install the dependencies with the command pip install -r requirements.txt inside the app directory, then start it with flask run. You need to create an .env file in the directory with the keys for accessing both APIs.
+
+Access it through the URL localhost:5000/stocks/TSLA.
