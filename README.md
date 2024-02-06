@@ -1,4 +1,4 @@
-# Stock Dashboard
+# Infoinvest Stock Dashboard
 
 Displays the values of the last seven days of a stock and calculates the value and percentage of variation, typically used for evaluating the performance of a stock. It also shows company information and recent related news obtained through the News API.
 
