@@ -1,5 +1,7 @@
 # Infoinvest Stock Dashboard
 
+See it here: https://mayconcampos.vercel.app/project/info-invest/
+
 Displays the values of the last seven days of a stock and calculates the value and percentage of variation, typically used for evaluating the performance of a stock. It also shows company information and recent related news obtained through the News API.
 
 Due to the request limit of the plan used for the Alpha Vantage API, I have limited it to only show stocks of one company. However, it can easily be modified to show other stocks by changing the route code in the views.py file as shown below.
